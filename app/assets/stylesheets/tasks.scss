@@ -1,0 +1,40 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Sunflower:300,700');
+body {
+  font-family: 'Sunflower', sans-serif;
+  font-weight: 400;
+  padding: 0 25px;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+.form-input {
+  padding: 15px 0;
+}
+
+#task {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+// blockquote {
+//   border-left: 5px solid lightgrey;
+//   margin: 30px 0;
+//   padding: 15px 25px;
+
+//   &.coach {
+//     background-color: lightyellow;
+//     p {
+//       font-weight: 400;
+//     }
+//   }
+// }
+
+// // put before cite tag -
+// cite:before {
+//   content: "—"
+// }

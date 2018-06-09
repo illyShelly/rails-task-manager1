@@ -1,0 +1,16 @@
+<%= form_for(@task) do |f| %>
+<div class="form-input">
+  <%= f.label :title %>
+  <%= f.text_field :title, class: 'form-control' %>
+</div>
+<div class="form-input">
+  <%= f.label :details %>
+  <%= f.text_area :details, class: 'form-control' %>
+</div>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
+
+
+<!-- text_area has 'detail' and 'class' - needs comma -->
+<!-- class has different structure -->
+<!-- put div to make some space -->

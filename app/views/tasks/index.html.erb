@@ -1,0 +1,27 @@
+<h1>My tasks</h1>
+
+<ul id="task">
+  <% @tasks.each do |task| %>
+  <!-- checkbox if done or not -->
+    <li>
+      <!-- checkboxes ticked/unticked -->
+      <% if task.completed %>
+        <i class="fa fa-check-square-o"></i>
+      <% else %>
+        <i class="fa fa-square-o"></i>
+      <% end %>
+      <!-- first task.title then as link/ check in rails routes-->
+      <!-- task.id not necessary to write id, defined in router -->
+      <%= link_to task.title, task_path(task.id) %>
+    <% end %>
+  </li>
+</ul>
+
+<!-- rails routes, path defined by me as: :new_task -->
+<!-- recreated link with awesome icon because of quotes -->
+<%= link_to new_task_path do %>
+<i class="fa fa-plus" aria-hidden="true"></i>
+Create new task
+<% end %>
+
+<!-- < link_to "Create new task", new_task_path > -->
