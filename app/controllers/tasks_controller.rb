@@ -25,8 +25,11 @@ class TasksController < ApplicationController
 
   def update
     # update task already stored in db, access change data to user another than specify below
-    @task = Task.find(task_params)
-
+    # it founds task by id
+    @task = Task.find(params[:id])
+    # it update by permited actions spec. below
+    @task.update(task_params)
+    redirect_to task_path(@task)
   end
 
   def destroy
@@ -42,7 +45,7 @@ class TasksController < ApplicationController
     # *Strong params*: You need to *whitelist* what can be updated by the user
     # Never trust user data!
     # added completed for user when click on checkbox
-    params.require(:task).permit(:title, :details)
+    params.require(:task).permit(:title, :details, :completed)
   end
 
 end

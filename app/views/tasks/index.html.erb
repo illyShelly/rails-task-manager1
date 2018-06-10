@@ -13,8 +13,16 @@
       <!-- first task.title then as link/ check in rails routes-->
       <!-- task.id not necessary to write id, defined in router -->
       <%= link_to task.title, task_path(task.id) %>
-    <% end %>
-  </li>
+
+    <!-- added trash icon to delete task + question box -->
+      .
+       <%= link_to task_path(task.id), method: :delete, data: { confirm: "Delete #{task.title}?" } do %>
+
+        <i class="fa fa-trash-o" aria-hidden="true"></i>
+        <% end %>
+    </li>
+  <!-- end of loop -->
+  <% end %>
 </ul>
 
 <!-- rails routes, path defined by me as: :new_task -->

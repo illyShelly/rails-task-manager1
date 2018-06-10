@@ -7,6 +7,16 @@
   <%= f.label :details %>
   <%= f.text_area :details, class: 'form-control' %>
 </div>
+
+<!-- part for edit form, bootsrap class checkbox -->
+<% unless f.object.new_record? %>
+    <div class="checkbox">
+      <label>
+        <%= f.check_box :completed %> Completed
+      </label>
+    </div>
+  <% end %>
+
   <%= f.submit class: 'btn btn-primary' %>
 <% end %>
 
